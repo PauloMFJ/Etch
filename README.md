@@ -5,4 +5,4 @@ Web-based study planner for students.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 # Contact
-Created by Paulo Jorge. Feel free to contact me!
+Created by Paulo Jorge - feel free to contact me!
