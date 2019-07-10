@@ -1,0 +1,34 @@
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.Tests.deps.json
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.Tests.runtimeconfig.json
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.Tests.runtimeconfig.dev.json
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.Tests.dll
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.Tests.pdb
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.dll
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.pdb
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.AssemblyInfoInputs.cache
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.AssemblyInfo.cs
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.csproj.CopyComplete
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.dll
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.pdb
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.Tests.deps.json
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.Tests.runtimeconfig.json
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.Tests.runtimeconfig.dev.json
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.Tests.dll
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.Tests.pdb
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.dll
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\bin\Debug\netcoreapp2.0\Etch.pdb
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.csprojAssemblyReference.cache
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.AssemblyInfoInputs.cache
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.AssemblyInfo.cs
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.csproj.CopyComplete
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.dll
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch.Tests\obj\Debug\netcoreapp2.0\Etch.Tests.pdb

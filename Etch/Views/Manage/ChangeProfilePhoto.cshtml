@@ -1,0 +1,34 @@
+﻿@model Etch.Models.ManageModels.ChangeProfilePhotoModel
+@{ ViewData["Title"] = "Change Profile Photo"; }
+@section styles {
+    <!-- Get Form CSS -->
+    <link rel="stylesheet" href="~/assets/styles/form.css" />
+}
+@section scripts {
+    <!-- Get Register JS -->
+    <script src="~/assets/scripts/file.js"></script>
+}
+
+<div class="center padding-32px">
+    <!-- Logo -->
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="margin-bottom logo transition-4s"><img src="~/assets/images/header/etch.png" alt="Logo" /></a>
+
+    <!-- Register Form -->
+    <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <!-- Validation Summary -->
+        @Html.Partial("_StatusMessage", Model.StatusMessage)
+        <div asp-validation-summary="All" class="messages"></div>
+
+        <!-- Profile Picture Input -->
+        <div class="margin-bottom">
+            <input asp-for="ProfilePhoto" type="file" name="@Html.DisplayNameFor(m => m.ProfilePhoto)" id="fileUpload" accept=".png,.jpg,.jpeg" />
+            <label for="fileUpload" id="fileDrag" class="transition-2s">
+                <span>Select a @Html.DisplayNameFor(m => m.ProfilePhoto)...</span>
+            </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="button transition-2s">Change Profile Photo</button>
+    </form>
+</div>

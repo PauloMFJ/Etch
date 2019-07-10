@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Etch.Models
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{ ViewData["Title"] = "Home"; }
+@section styles {
+    <!-- Get Home CSS -->
+    <link rel="stylesheet" href="~/assets/styles/home.css" />
+}
+
+<div class="center padding-32px">
+     <!-- Logo -->
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="margin-bottom logo transition-4s"><img src="~/assets/images/header/etch.png" alt="Logo" /></a>
+    <p>A Study planner for those who like it simple. </p>
+          
+    <h1>What is Etch?</h1>
+    <p>It's a tool that students can use to schedule, keep track of study activities and to 
+        determine progress towards given tasks.</p>
+    
+    <h1>Study Tasks</h1>
+    <p>Never lose track of your busy schedule with this state-of-the-art, task management system 
+        which lets you add, view and edit all your tasks into a stylish and user friendly system.</p>
+</div>

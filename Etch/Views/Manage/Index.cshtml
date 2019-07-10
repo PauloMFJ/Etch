@@ -1,0 +1,20 @@
+﻿@model Etch.Models.ManageModels.IndexModel
+@{ ViewData["Title"] = "Profile"; }
+@section styles {
+    <!-- Get Form CSS -->
+    <link rel="stylesheet" href="~/assets/styles/form.css" />
+}
+
+<!-- Content -->
+<div class="center padding-32px">
+    <!-- Logo -->
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="margin-bottom logo transition-4s"><img src="~/assets/images/header/etch.png" alt="Logo" /></a>
+    
+    @Html.Partial("_StatusMessage", Model.StatusMessage)
+    <div asp-validation-summary="All" class="messages"></div>
+
+    <!-- Navigation Buttons-->
+    <a asp-action="ChangePassword" class="button margin-bottom transition-2s">Change Password</a>
+    <a asp-action="ChangeProfilePhoto" class="button margin-bottom transition-2s">Change Profile Photo</a>
+    <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="button margin-bottom transition-2s">Return to Dashboard</a>
+</div>

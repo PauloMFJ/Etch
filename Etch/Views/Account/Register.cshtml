@@ -1,0 +1,65 @@
+﻿@model Etch.Models.AccountModels.RegisterModel
+@{ ViewData["Title"] = "Register"; }
+@section styles {
+    <!-- Get Form CSS -->
+    <link rel="stylesheet" href="~/assets/styles/form.css" />
+}
+@section scripts {
+    <!-- Get Register JS -->
+    <script src="~/assets/scripts/file.js"></script>
+}
+
+<div class="center padding-32px">
+    <!-- Logo -->
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="margin-bottom logo transition-4s"><img src="~/assets/images/header/etch.png" alt="Logo" /></a>
+
+    <!-- Register Form -->
+    <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <!-- Validation Summary -->
+        <div asp-validation-summary="All" class="messages"></div>
+
+        <!-- Fist/Last Name Validation -->
+        <div>
+            <span asp-validation-for="FirstName" class="left-half message"></span>
+            <span asp-validation-for="LastName" class="right-half message"></span>
+        </div>
+
+        <div>
+            <!-- First Name Input -->
+            <input asp-for="FirstName" type="text" placeholder="@Html.DisplayNameFor(m => m.FirstName)*" class="left-half margin-bottom transition-2s" required />
+            <!-- Last Name Input -->
+            <input asp-for="LastName" type="text" placeholder="@Html.DisplayNameFor(m => m.LastName)*" class="right-half margin-bottom transition-2s" required />
+        </div>
+
+        <!-- Profile Picture Input -->
+        <div class="margin-bottom">
+            <input asp-for="ProfilePhoto" type="file" name="@Html.DisplayNameFor(m => m.ProfilePhoto)" id="fileUpload" accept=".png,.jpg,.jpeg" />
+            <label for="fileUpload" id="fileDrag" class="transition-2s">
+                <span>Select a @Html.DisplayNameFor(m => m.ProfilePhoto)...</span>
+            </label>
+        </div>
+
+        <!-- Email Input -->
+        <span asp-validation-for="Email" class="message"></span>
+        <div class="margin-bottom">
+            <input asp-for="Email" type="email" placeholder="@Html.DisplayNameFor(m => m.Email)*" class="transition-2s" required />
+        </div>
+
+        <!-- Password Input -->
+        <span asp-validation-for="Password" class="message"></span>
+        <div class="margin-bottom">
+            <input asp-for="Password" type="password" placeholder="@Html.DisplayNameFor(m => m.Password)*" class="transition-2s" required />
+        </div>
+
+        <!-- Confirm Password Input -->
+        <span asp-validation-for="ConfirmPassword" class="message"></span>
+        <div class="margin-bottom">
+            <input asp-for="ConfirmPassword" type="password" placeholder="@Html.DisplayNameFor(m => m.ConfirmPassword)*" class="transition-2s" required />
+        </div>
+
+        <!-- Buttons -->
+        <button type="submit" class="button margin-bottom transition-2s">Register</button>
+        <a asp-action="Login" class="button transition-2s">Already Registered?</a>
+    </form>
+</div>

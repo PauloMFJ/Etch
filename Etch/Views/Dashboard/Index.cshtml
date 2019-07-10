@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Etch.Models.ScheduleModels.GanttTask>
+@{ ViewData["Title"] = "Dashboard"; }
+@section styles {
+    <!-- Get Dashboard CSS -->
+    <link rel="stylesheet" href="~/assets/styles/dashboard.css" />
+}
+
+<div>
+    <div class="dashboard">
+        <div class="item small">
+            <div>
+                <h2>Goals</h2>
+                <a href="#" class="more transition-4s"><img src="~/assets/images/content/dashboard/downArrow.png" alt="See More" /></a>
+            </div>
+        </div>
+        <div class="item medium">
+            <div>
+                <h2>Notes</h2>
+                <a href="#" class="more transition-4s"><img src="~/assets/images/content/dashboard/downArrow.png" alt="See More" /></a>
+            </div>
+        </div>
+        <div class="item large">
+            <div>
+                <h2>Schedule</h2>
+                @foreach (var task in Model) {
+                    <div class="sub-item">
+                        <h4>@task.StartDate.ToString("dddd d MMMM") <span>-</span> @task.StartDate.AddDays(task.Duration).ToString("dddd d MMMM")</h4>
+                        <p><span style="color: @task.Type">&#8226;</span> @task.Title</p>
+                    </div>
+                }
+                <a asp-area="" asp-controller="Schedule" asp-action="Index" class="more transition-4s"><img src="~/assets/images/content/dashboard/downArrow.png" alt="See More" /></a>
+            </div>
+        </div>
+    </div>
+</div>

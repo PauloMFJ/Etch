@@ -1,0 +1,111 @@
+﻿@model IEnumerable<Etch.Models.ScheduleModels.GanttTask>
+@{ ViewData["Title"] = "Schedule"; }
+@section styles {
+    <!-- Get Form CSS -->
+    <link rel="stylesheet" href="~/assets/styles/form.css" />
+    <!-- Get Schedule CSS -->
+    <link rel="stylesheet" href="~/assets/styles/schedule.css" />
+}
+@section scripts {
+    <!-- Get Tooltip JS -->
+    <script src="~/assets/scripts/tippy.all.min.js" type="text/javascript"></script>
+    <script>
+        tippy('.tooltip', {
+            delay: 100,
+            arrow: true,
+            placement: 'bottom',
+            duration: 200,
+            performance: true,
+            sticky: true,
+            animation: 'scale'
+        })
+    </script>
+    <!-- Popup JS -->
+    <script>
+        $(function () {
+            $(".details").click(function () {
+                var $buttonClicked = $(this);
+                var id = $buttonClicked.attr('data-id');
+                $.ajax({
+                    async: true,
+                    type: "GET",
+                    url: '/Schedule/Details',
+                    contentType: "application/json; charset=utf-8",
+                    data: { "Id": id },
+                    datatype: "json",
+                    success: function (data) {
+                        $('#model').html(data);
+                        $('#popup').addClass('show');
+                    },
+                });
+            });
+        });
+    </script>
+}
+
+<div>
+    <div id="schedule">
+        <div>
+            <div>
+                <table id="gantt">
+                    @{
+                        var StartDate = Model.Count() == 0 ? DateTime.Now : Model.First().StartDate;
+                        var EndDate = Model.Count() == 0 ? DateTime.Now : Model.Last().StartDate.AddDays(Model.Last().Duration);
+                        var previousMonth = 0;
+                    }
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(m => m.Title)</th>
+                            <th>@Html.DisplayNameFor(m => m.StartDate)</th>
+                            <th>@Html.DisplayNameFor(m => m.Duration)</th>
+                            <th>Edit</th>
+                            <th>
+                                <table>
+                                    <tr>
+                                        @for (var date = StartDate; date < EndDate; date = date.AddDays(1)) {
+                                            if (date.Month != previousMonth) {
+                                                previousMonth = date.Month;
+                                                var daysLeft = date.Month != EndDate.Month ? DateTime.DaysInMonth(date.Year, date.Month) - date.Day + 1 : EndDate.Day;
+                                                <th class="@(date != StartDate ? "border-left" : "")" colspan="@daysLeft">@date.ToString("MMMM")</th>
+                                            }
+                                        }
+                                    </tr>
+                                    <tr>
+                                        @for (var date = StartDate; date < EndDate; date = date.AddDays(1)) {
+                                            <th class="@(date.Day == 1 && date != StartDate ? "border-left" : "")">@date.ToString("dd ddd")</th>
+                                        }
+                                    </tr>
+                                </table>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var task in Model) {
+                            <tr>
+                                <td>@task.Title</td>
+                                <td>@task.StartDate.ToString("dd/MM/yyyy")</td>
+                                <td>@task.Duration</td>
+                                <td><a href="javascript:void(0);" class="details" data-id="@task.GanttTaskId"><img src="~/assets/images/content/schedule/plus.png" alt="Edit" /></a></td>
+                                <td>
+                                    @{ var duration = task.Duration * 96 - 12; }
+                                    <div style="width: @(duration)px; margin-left: @((task.StartDate - StartDate).Days * 96)px; background-color: @task.Type" class="tooltip" title="@task.Title">
+                                        <div style="width: @(duration * ((float)task.Progress / 100))px;"></div>
+                                        <div style="width: @(duration)px">
+                                            <p>@task.Title</p>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup -->
+<div id="popup" class="transition-2s">
+    <div id="model" class="center"></div>
+</div> 

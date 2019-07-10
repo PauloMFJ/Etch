@@ -1,0 +1,18 @@
+﻿@model Etch.Models.ErrorModel
+@{ ViewData["Title"] = "Error"; }
+@section styles {
+    <!-- Get Form CSS -->
+    <link rel="stylesheet" href="~/assets/styles/form.css" />
+}
+
+<div class="center padding-32px">
+    <h1>@ViewData["Title"]</h1>
+    <p class="margin-bottom">Unfortunately, an error occurred while processing your request. 
+        Please try again or get in contact.</p>
+
+    @if (Model.ShowRequestId) {
+        <p><strong>Request ID:</strong> <code>@Model.RequestId</code></p>
+    }
+
+    <a href="@Url.Action("Index", "Home")" class="button transition-2s">Return Home</a>
+</div>

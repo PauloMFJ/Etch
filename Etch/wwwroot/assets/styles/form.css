@@ -1,0 +1,258 @@
+/*! file: form.css | author: Paulo Jorge */
+/* Logo */
+main .logo > img {
+    display: block;
+    max-width: 64px;
+    width: 100%;
+}
+
+/* Vertical/Horizontal Center Align */
+main {
+    position: relative;
+    height: 100%;
+}
+
+/* Misc. */
+.margin-bottom { margin: 0 auto 20px !important; }
+
+/* Form */
+form {
+	max-width: 384px;
+    width: 100%;
+	padding: 0;
+    color: #fff;
+	margin: 0 auto;
+}
+form > div {
+	position: initial !important;
+    color: inherit;
+    overflow: hidden;
+}
+form > div > input[type="text"],
+form > div > input[type="email"],
+form > div > input[type="password"],
+form > div > input[type="number"],
+form > div > input[type="date"],
+form > div > textarea {
+	display: block;
+    color: inherit;
+	width: 100%;
+	max-width: 100%;
+	padding: 10px;
+    font-size: inherit;
+   	text-align: left;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: text;
+}
+form > div > input[type="text"],
+form > div > input[type="email"],
+form > div > input[type="password"],
+form > div > input[type="number"],
+form > div > input[type="date"] { height: 38px; }
+form > div > textarea { min-height: 76px; }
+form > div > input[type="text"]:focus,
+form > div > input[type="email"]:focus,
+form > div > input[type="password"]:focus,
+form > div > input[type="number"]:focus,
+form > div > input[type="date"]:focus,
+form > div > textarea:focus {
+    color: inherit;
+    background: rgba(255, 255, 255, 0.1);
+	display: block;
+	outline: none;
+}
+form > div > input[type="text"]::placeholder,
+form > div > input[type="email"]::placeholder,
+form > div > input[type="password"]::placeholder,
+form > div > input[type="number"]::placeholder,
+form > div > input[type="date"]::placeholder,
+form > div > textarea::placeholder {
+    color: inherit;
+}
+.left-half, .right-half { 
+    max-width: 48% !important;
+    float: left;
+}
+.right-half { float: right; }
+
+/* Messages */
+form .messages > ul > li {
+    list-style-type: none;
+    padding: 0 0 8px;
+}
+form .message {
+    display: block;
+    padding: 0 0 8px;
+}
+
+/* Files */
+form > div > input[type="file"] {
+    /* Hide checkbox ofscreen */
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+    clip: rect(0, 0, 0, 0);
+}
+form > div > input[type="file"] + label {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px dashed #fff;
+    border-radius: 20px;
+    background-color: transparent;
+    text-align: left;
+}
+form > div > input[type="file"]:hover + label,
+form > div > input[type="file"]:focus + label { background: rgba(255, 255, 255, 0.1); }
+form > div > input[type="file"] + label * { pointer-events: none; }
+form > div span {
+    font-size: inherit;
+    word-wrap: break-word;
+}
+.uploaded { background: rgba(0, 255, 0, 0.4) !important; }
+.uploaded:hover { background: rgba(0, 255, 0, 0.3) !important; }
+
+.has-heading { 
+    display: table;
+    width: 100%;
+    text-align: right; 
+}
+.has-heading > span { 
+    display: table-cell;                      
+    text-align: left; 
+}
+.has-heading > span > p { vertical-align: middle; }
+
+/* Checkbox */
+form > div input[type="checkbox"] {
+    /* Hide checkbox ofscreen */
+	position: fixed;
+	top: -9999px;
+	left: -9999px;
+	clip: rect(0, 0, 0, 0);
+}
+.vertical-align { vertical-align: middle; }
+form > div input[type="checkbox"] ~ label {
+    width: 16px;
+    height: 16px;
+    display: block;
+    position: relative;
+    margin: auto;
+    text-indent: -999px;
+    overflow: hidden;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+form > div input[type="checkbox"] ~ label {
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+form > div input[type="checkbox"] ~ label:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    border-radius: 8px;
+    /* Apply transitions */
+	-webkit-transition: .2s ease-in-out;
+       -moz-transition: .2s ease-in-out;
+	      -o-animation: .2s ease-in-out;
+            transition: .2s ease-in-out;
+}
+
+form > div input[type="checkbox"]:checked ~ label:before {
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* Sliders */   
+form > div input[type="range"] {
+    /* Remove default appearance */
+    -webkit-appearance: none;
+       -moz-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    outline: none;
+    width: 100%;
+    height: 4px;
+    margin: 4px 0;
+    border-radius: 20px;
+    background: #fff;
+    opacity: 0.6;
+    cursor: pointer;
+}
+form > div input[type="range"]:focus { outline: none; }
+form > div input[type="range"]:hover { opacity: .9; }
+form > div input[type="range"]::-webkit-slider-thumb {
+    /* Remove default appearance */
+    -webkit-appearance: none;
+       -moz-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: #6180f6;
+}
+form > div input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background: #6180f6;
+}
+
+/* Buttons */
+.button {
+    position: relative;
+    display: block;
+    padding: 10px 0;
+    max-width: 180px;
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: inherit;
+    text-decoration: none;
+    color: #fff;
+    background-color: #6180f6;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 1;
+}
+.button-red {
+    color: #ff584c !important;
+    background-color: #fff !important;
+}
+.button-white {
+    color: #6180f6 !important;
+    background-color: #fff !important;
+}
+.button:hover { background-color: #4f67c1; }
+.button-red:hover { background-color: #ffc4c0 !important; }
+.button-white:hover { background-color: #b5c4ff !important; }
+.button:active { top: 2px; }
+
+/* --- Scalling --- */
+@media screen and (max-width: 384px) {
+    /* Display as full instead of halfs */
+    .left-half, .right-half {
+        display: block !important;
+        max-width: 100% !important;
+    }
+}

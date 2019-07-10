@@ -1,0 +1,73 @@
+﻿@model Etch.Models.ScheduleModels.GanttTask
+@{ ViewData["Title"] = "Add Task"; }
+@section styles {
+    <!-- Get Form CSS -->
+    <link rel="stylesheet" href="~/assets/styles/form.css" />
+    <!-- Get Schedule CSS -->
+    <link rel="stylesheet" href="~/assets/styles/schedule.css" />
+    <!-- Get Colour Picker CSS -->
+    <link rel="stylesheet" href="~/assets/styles/huebee.min.css" />
+}
+@section scripts {
+    <!-- Get Slider JS -->
+    <script src="~/assets/scripts/slider.js"></script>
+    <!-- Get Datetime JS -->
+    <script src="~/assets/scripts/datetime.js"></script>
+    <!-- Get Colour Picker JS -->
+    <script src="~/assets/scripts/piklor.min.js"></script>
+    <script src="~/assets/scripts/gantt.js"></script>
+}
+
+<div class="center top40 padding-32px">
+    <!-- Logo -->
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="margin-bottom logo transition-4s"><img src="~/assets/images/header/etch.png" alt="Logo" /></a>
+
+    <!-- Add Task Form -->
+    <form asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+        @Html.AntiForgeryToken()
+
+        <!-- Task Title Input -->
+        <span asp-validation-for="Title" class="message"></span>
+        <div class="margin-bottom">
+            <span><p class="inline-block">@Html.DisplayNameFor(m => m.Title)</p></span>
+            <textarea asp-for="Title" rows="3" maxlength="100" required>@Model.Title</textarea>
+        </div>
+
+        <!-- Task Type Input -->
+        <span asp-validation-for="Type" class="message"></span>
+        <div class="margin-bottom">
+            <span><p class="inline-block">@Html.DisplayNameFor(m => m.Type)</p></span>
+            <input asp-for="Type" type="hidden" class="colour-input" hidden />
+            <div class="colour-picker-wrapper transition-2s">
+                <div class="colour-picker"></div>
+            </div>
+        </div>
+
+        <!-- Start Date Input -->
+        <span asp-validation-for="StartDate" class="message"></span>
+        <div class="margin-bottom">
+            <span><p class="inline-block">@Html.DisplayNameFor(m => m.StartDate)</p></span>
+            <input asp-for="StartDate" type="date" class="today transition-2s" required />
+        </div>
+
+        <!-- Duration Input -->
+        <span asp-validation-for="Duration" class="message"></span>
+        <div class="margin-bottom">
+            <span><p class="inline-block">@Html.DisplayNameFor(m => m.Duration) (In days)</p></span>
+            <input asp-for="Duration" type="number" value="1" class="transition-2s" required />
+        </div>
+
+        <!-- Progress -->
+        <span asp-validation-for="Progress" class="message"></span>
+        <div class="margin-bottom">
+            <span><p class="inline-block">@Html.DisplayNameFor(m => m.Progress)</p></span>
+            <input asp-for="Progress" type="range" min="0" max="100" value="0" placeholder="@Html.DisplayNameFor(m => m.Progress)"
+                   class="transition-2s" id="slider" />
+            <p class="padding-8px right-align inline-block"><span id="progress"></span>%</p>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="button margin-bottom transition-2s">Add Task</button>
+        <a asp-action="Index" class="button transition-2s">Return to Schedule</a>
+    </form>
+</div>

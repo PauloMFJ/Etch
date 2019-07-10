@@ -1,0 +1,120 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<div class="banner float-right">
+    @if (SignInManager.IsSignedIn(User)) {
+        <!-- Navigation Icons -->
+        <a asp-area="" asp-controller="Schedule" asp-action="AddTask" class="icon transition-4s"><img src="~/assets/images/header/plus.png" alt="Add" /></a>
+        <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+            @Html.AntiForgeryToken()
+            <button type="submit" class="clear-button-styling icon transition-4s"><img src="~/assets/images/header/logout.png" alt="Logout" /></button>
+        </form>
+        <a asp-area="" asp-controller="Manage" asp-action="Index" class="icon transition-4s"><img src="~/assets/images/header/settings.png" alt="Settings" /></a>
+    } else { 
+        <a asp-area="" asp-controller="Account" asp-action="Login" class="nav-link transition-2s">Login</a>
+        <a asp-area="" asp-controller="Account" asp-action="Register" class="nav-link transition-2s">Register</a>
+    }
+
+    <!-- Logo -->
+    <a asp-area="" asp-controller="Home" asp-action="Index" class="logo transition-4s"><img src="~/assets/images/header/etch.png" alt="Logo" /></a>
+</div>
+<div class="banner float-left transition-4s" id="sidebar-push">
+    @if (SignInManager.IsSignedIn(User)) {
+        <h2>@ViewData["Title"]</h2>
+    }
+</div>
+
+@if (SignInManager.IsSignedIn(User)) {
+    <div id="sidebar">
+        <ul id="sidebar-menu" class="transition-4s">
+            <div class="sidebar-title">
+                <img id="menu-icon" src="~/assets/images/header/nav/menu.png" alt="Menu" class="transition-2s" href="#" onclick="openNav()">
+            </div>
+            <li>
+                <a asp-area="" asp-controller="Dashboard" asp-action="Index" class="@(ViewData["Title"].Equals("Dashboard") ? "active" : "") transition-4s">
+                    <img src="~/assets/images/header/nav/home.png" alt="Icon">
+                    <span>Dashboard</span>
+                    <img src="~/assets/images/header/nav/arrow.png">
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Schedule" asp-action="Index" class="@(ViewData["Title"].Equals("Schedule") ? "active" : "") transition-4s">
+                    <img src="~/assets/images/header/nav/schedule.png" alt="Icon">
+                    <span>Schedule</span>
+                    <img src="~/assets/images/header/nav/arrow.png">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="@(ViewData["Title"].Equals("Goals") ? "active" : "") transition-4s">
+                    <img src="~/assets/images/header/nav/goals.png" alt="Icon">
+                    <span>Goals</span>
+                    <img src="~/assets/images/header/nav/arrow.png">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="@(ViewData["Title"].Equals("Notes") ? "active" : "") transition-4s">
+                    <img src="~/assets/images/header/nav/notes.png" alt="Icon">
+                    <span>Notes</span>
+                    <img src="~/assets/images/header/nav/arrow.png">
+                </a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Manage" asp-action="Index" class="@(ViewData["Title"].Equals("Profile") ? "active" : "") transition-4s">
+                    <img src="~/assets/images/header/nav/settings.png" alt="Icon">
+                    <span>Profile</span>
+                    <img src="~/assets/images/header/nav/arrow.png">
+                </a>
+            </li>
+            <div class="sidebar-profile">
+                <div class="profile" style="background-image: url('@Url.Action("ProfilePhoto", "Shared")') !important"></div>
+                <div>User</div>
+                <div>@UserManager.GetUserAsync(User).Result.FirstName @UserManager.GetUserAsync(User).Result.LastName</div>
+            </div>
+        </ul>
+    </div>
+
+    <!-- Theme Picker -->
+    <div id="theme-picker" class="transition-4s">
+        <div class="toggle"><img src="~/assets/images/content/profile/color-wheel.png" alt="Theme Picker" /> </div>
+        <h3>Theme Picker</h3>
+        <p>Personalise your experience with one of the following themes!</p>
+        <form asp-controller="Shared" asp-action="ChangeTheme"  asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post">
+            <button type="submit" name="submit" value="Default">
+                <div></div>
+                <div></div>
+                <div><p class="transition-2s">Default</p></div>
+            </button>
+            <button type="submit" name="submit" value="Light">
+                <div></div>
+                <div></div>
+                <div><p class="transition-2s">Light</p></div>
+            </button>
+            <button type="submit" name="submit" value="Dark">
+                <div></div>
+                <div></div>
+                <div><p class="transition-2s">Dark</p></div>
+            </button>
+            <button type="submit" name="submit" value="Agua">
+                <div></div>
+                <div></div>
+                <div><p class="transition-2s">Agua</p></div>
+            </button>
+            <button type="submit" name="submit" value="Sunrise">
+                <div></div>
+                <div></div>
+                <div><p class="transition-2s">Sunrise</p></div>
+            </button>
+            <button type="submit" name="submit" value="Berry">
+                <div></div>
+                <div></div>
+                <div><p class="transition-2s">Berry</p></div>
+            </button>
+            <button type="submit" name="submit" value="Pastel">
+                <div></div>
+                <div></div>
+                <div><p class="transition-2s">Pastel</p></div>
+            </button>
+        </form>
+    </div>
+}

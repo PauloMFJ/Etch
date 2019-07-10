@@ -1,0 +1,37 @@
+﻿@model Etch.Models.ThemeModel;
+@{ string gradient;
+    switch (Model.Theme) {
+        case ApplicationUser.Themes.Default:
+            gradient = "linear-gradient(#cf69b9, #125aa5)";
+            break;
+
+        case ApplicationUser.Themes.Light:
+            gradient = "linear-gradient(#ccc, #ccc)";
+            break;
+
+        case ApplicationUser.Themes.Dark:
+            gradient = "linear-gradient(#333, #333)";
+            break;
+
+        case ApplicationUser.Themes.Agua:
+            gradient = "linear-gradient(#1fba5f, #158ba0)";
+            break;
+
+        case ApplicationUser.Themes.Sunrise:
+            gradient = "linear-gradient(#bf871c, #d74343)";
+            break;
+
+        case ApplicationUser.Themes.Berry:
+            gradient = "linear-gradient(#be464c, #773395)";
+            break;
+
+        case ApplicationUser.Themes.Pastel:
+            gradient = "linear-gradient(#f5aee2, #33a38a)";
+            break;
+
+        default:
+            gradient = "linear-gradient(#cf69b9, #125aa5)";
+            break;
+    }
+}
+@gradient

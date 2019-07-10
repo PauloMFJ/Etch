@@ -1,0 +1,24 @@
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\bin\Debug\netcoreapp2.0\Etch.dll
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\bin\Debug\netcoreapp2.0\Etch.deps.json
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\bin\Debug\netcoreapp2.0\Etch.runtimeconfig.json
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\bin\Debug\netcoreapp2.0\Etch.runtimeconfig.dev.json
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.AssemblyInfoInputs.cache
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.AssemblyInfo.cs
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.dll
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.pdb
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\bin\Debug\netcoreapp2.0\Etch.pdb
+C:\Users\Paulo\Dropbox\University of East Anglia\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.csprojAssemblyReference.cache
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\bin\Debug\netcoreapp2.0\Etch.deps.json
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\bin\Debug\netcoreapp2.0\Etch.runtimeconfig.json
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\bin\Debug\netcoreapp2.0\Etch.runtimeconfig.dev.json
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\bin\Debug\netcoreapp2.0\Etch.dll
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\bin\Debug\netcoreapp2.0\Etch.pdb
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.csprojAssemblyReference.cache
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.AssemblyInfoInputs.cache
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.AssemblyInfo.cs
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.dll
+C:\Users\Paulo\Dropbox\UEA\Yr 2\Software Engineering 1 - CMP-5012B\Etch\Etch\Etch\obj\Debug\netcoreapp2.0\Etch.pdb

@@ -1,0 +1,64 @@
+﻿@model Etch.Models.ScheduleModels.GanttTask
+<!-- Get Slider JS -->
+<script src="~/assets/scripts/slider.js"></script>
+<!-- Get Colour Picker JS -->
+<script src="~/assets/scripts/piklor.min.js"></script>
+<script src="~/assets/scripts/gantt.js"></script>
+
+<!-- Details Form -->
+<form asp-action="Update" method="post">
+    @Html.AntiForgeryToken()
+
+    <!-- Header -->
+    <h3 class="margin-bottom">@Model.StartDate.ToString("dd/MM/yyyy") - @Model.StartDate.AddDays(Model.Duration).ToString("dd/MM/yyyy")</h3>
+
+    <!-- Hidden Id -->
+    <input asp-for="GanttTaskId" type="hidden" value="@Model.GanttTaskId" />
+
+    <!-- Task Title Input -->
+    <span asp-validation-for="Title" class="message"></span>
+    <div class="margin-bottom">
+        <span><p class="inline-block">@Html.DisplayNameFor(m => m.Title)</p></span>
+        <textarea asp-for="Title" rows="3" maxlength="100" required>@Model.Title</textarea>
+    </div>
+
+    <!-- Task Type Input -->
+    <span asp-validation-for="Type" class="message"></span>
+    <div class="margin-bottom">
+        <span><p class="inline-block">@Html.DisplayNameFor(m => m.Type)</p></span>
+        <input asp-for="Type" type="hidden" class="colour-input" value="@Model.Type" hidden />
+        <div class="colour-picker-wrapper transition-2s">
+            <div class="colour-picker"></div>
+        </div>
+    </div>
+
+    <!-- Start Date Input -->
+    <span asp-validation-for="StartDate" class="message"></span>
+    <div class="margin-bottom">
+        <span><p class="inline-block">@Html.DisplayNameFor(m => m.StartDate)</p></span>
+        <input asp-for="StartDate" type="date" class="transition-2s" required />
+    </div>
+
+    <!-- Duration Input -->
+    <span asp-validation-for="Duration" class="message"></span>
+    <div class="margin-bottom">
+        <span><p class="inline-block">@Html.DisplayNameFor(m => m.Duration) (In days)</p></span>
+        <input asp-for="Duration" type="number" value="@Model.Duration" class="transition-2s" required />
+    </div>
+
+    <!-- Progress -->
+    <span asp-validation-for="Progress" class="message"></span>
+    <div class="margin-bottom">
+        <span><p class="inline-block">@Html.DisplayNameFor(m => m.Progress)</p></span>
+        <input asp-for="Progress" type="range" min="0" max="100" value="@Model.Progress" placeholder="@Html.DisplayNameFor(m => m.Progress)"
+               class="transition-2s" id="slider" />
+        <p class="padding-8px right-align inline-block"><span id="progress"></span>%</p>
+    </div>
+
+    <!-- Buttons -->
+    <button type="submit" class="button margin-bottom transition-2s">Save Changes</button>
+    <a id="close" class="button button-white margin-bottom transition-2s">Cancel</a>
+</form>
+<form asp-action="Delete" asp-route-id="@Model.GanttTaskId">
+    <button type="submit" class="button button-red transition-2s">Delete</button>
+</form>

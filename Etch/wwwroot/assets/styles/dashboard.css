@@ -1,0 +1,70 @@
+/*! file: dashboard.css | author: Paulo Jorge */
+header .font-size-small { color: #ccc; }
+
+main { left: 56px !important; }
+main > div {
+  position: absolute;
+  top: 82px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Dashboard */
+.dashboard {
+    float: left;
+    padding: 0 16px 16px;
+    width: 100%;
+}
+.dashboard > .item {
+    float: left;
+    padding: 0 16px;
+    width: 100%;
+    text-align: left;
+}
+.dashboard > .small { max-width: 25%; }
+.dashboard > .medium { max-width: 50%; }
+.dashboard > .large { max-width: 100%; }
+.dashboard > .item > div {
+    margin-bottom: 32px;
+    background-color: #00000070;
+    height: 196px;
+    overflow: hidden;
+    position: relative;
+    padding: 16px;
+    border-top: 2px solid #000;
+}
+.dashboard > .large > div { height: auto !important; }
+
+/* Item Content */
+.dashboard > .item > div h2,
+.dashboard > .item > div > .sub-item { margin-bottom: 12px; }
+.dashboard > .item > div h4 { 
+    color: #d5d5d5; 
+    margin-bottom: 3px;
+}
+.dashboard > .item > div h4 > span { color: #fff; } 
+.dashboard > .item > div > .sub-item p { margin-left: 12px; }
+
+/* More Down Arrow */
+.dashboard > .item > div > .more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    right: 0;
+}
+.dashboard > .item > div > .more > img { padding: 8px 0; }
+.dashboard > .item:nth-child(1) > div { border-color: #ff00d1; }
+.dashboard > .item:nth-child(2) > div { border-color: #6e0098; }
+.dashboard > .item:nth-child(3) > div { border-color: #00e220; }
+
+/* ------------------ Scalling ------------------ */
+@media screen and (max-width: 768px) {
+    .dashboard > .small { max-width: 50% !important; }
+}
+
+@media screen and (max-width: 512px) { 
+    .dashboard > .small { max-width: 100% !important; }
+    .dashboard > .medium { max-width: 100% !important; }
+}

@@ -1,0 +1,10 @@
+/*! file: home.css | author: Paulo Jorge */
+main p {
+    max-width: 448px;
+    margin: 16px auto 32px;
+}
+
+h1 { 
+    margin: 0;
+    padding: 0;
+}
